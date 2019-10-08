@@ -1,0 +1,258 @@
+[
+  {
+    "id": "1",
+    "label": "状态管理类",
+    "children": [
+      {
+        "id": 0,
+        "label": "报警数量",
+        "check": true,
+        "category": [
+          {
+            "id": "7200",
+            "label": "按专业类别",
+            "check": true,
+            "type": "specialtyProps"
+          },
+          {
+            "id": "7201",
+            "label": "按设备类别",
+            "check": false,
+            "type": "deviceType"
+          },
+          {
+            "id": "7202",
+            "label": "按告警来源",
+            "check": false,
+            "type": "appName"
+          },
+          {
+            "id": "7203",
+            "label": "按告警级别",
+            "check": false,
+            "type": "alertSeverity"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "诊断准确率",
+        "check": false,
+        "category": [
+          {
+            "id": "7208",
+            "isPic": true,
+            "label": "按专业类别",
+            "check": true,
+            "type": "specialtyProps"
+          },
+          {
+            "id": "7209",
+            "label": "按设备类别",
+            "check": false,
+            "isPic": true,
+            "type": "deviceType"
+          },
+          {
+            "id": "7210",
+            "label": "按状态级别",
+            "check": false,
+            "isPic": true,
+            "type": "alertSeverity"
+          },
+          {
+            "id": "7211",
+            "label": "按异常类别",
+            "check": false,
+            "isPic": true,
+            "type": ""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "label": "故障时间",
+        "check": false,
+        "category": [
+          {
+            "id": "7216",
+            "label": "按设备类别",
+            "check": true,
+            "type": "deviceType"
+          },
+          {
+            "id": "7217",
+            "label": "按事故级别",
+            "check": false,
+            "type": "faultLevel"
+          },
+          {
+            "id": "7218",
+            "label": "按故障专业",
+            "check": false,
+            "type": "professionalAttr"
+          },
+          {
+            "id": "7219",
+            "label": "按故障原因",
+            "check": false,
+            "type": "reasonAttr"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "故障次数",
+        "check": false,
+        "category": [
+          {
+            "id": "7220",
+            "label": "按设备类别",
+            "check": true,
+            "type": "deviceType"
+          },
+          {
+            "id": "7221",
+            "label": "按事故级别",
+            "check": false,
+            "type": "faultLevel"
+          },
+          {
+            "id": "7222",
+            "label": "按故障专业",
+            "check": false,
+            "type": "professionalAttr"
+          },
+          {
+            "id": "7223",
+            "label": "按故障原因",
+            "check": false,
+            "type": "reasonAttr"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "label": "业务管理类",
+    "children": [
+      {
+        "id": 1,
+        "label": "检修项目数",
+        "check": true,
+        "category": [
+          {
+            "id": "7226",
+            "label": "按设备类别",
+            "check": true,
+            "type": "deviceType"
+          },
+          {
+            "id": "7227",
+            "label": "按检修类别",
+            "check": false,
+            "type": ""
+          },
+          {
+            "id": "7228",
+            "label": "按任务来源",
+            "check": false,
+            "type": ""
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "维护项目数",
+        "check": false,
+        "category": [
+          {
+            "id": "7239",
+            "label": "按设备类别",
+            "check": true,
+            "type": "deviceType"
+          },
+          {
+            "id": "7240",
+            "label": "按任务来源",
+            "check": false,
+            "type": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "label": "绩效管理类",
+    "children": [
+      {
+        "id": 0,
+        "label": "检修任务完成率",
+        "check": true,
+        "category": [
+          {
+            "id": "7241",
+            "label": "按设备类别",
+            "check": true,
+            "isPic": true,
+            "type": "deviceType"
+          },
+          {
+            "id": "7242",
+            "label": "按检修类别",
+            "check": false,
+            "isPic": true,
+            "type": ""
+          },
+          {
+            "id": "7243",
+            "label": "按任务来源",
+            "check": false,
+            "isPic": true,
+            "type": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "状态维修项目比率",
+        "check": false,
+        "category": [
+          {
+            "id": "7246",
+            "label": "按设备类别",
+            "check": true,
+            "type": "deviceType"
+          },
+          {
+            "id": "7247",
+            "label": "按检修类别",
+            "check": false,
+            "type": ""
+          },
+          {
+            "id": "7248",
+            "label": "按任务来源",
+            "check": false,
+            "type": ""
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "状态监测设备覆盖率",
+        "check": false,
+        "category": [
+          {
+            "id": "7249",
+            "label": "按设备类别",
+            "check": true,
+            "type": "deviceType"
+          }
+        ]
+      }
+    ]
+  }
+]

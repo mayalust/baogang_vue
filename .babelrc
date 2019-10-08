@@ -1,0 +1,28 @@
+{
+  "presets": ["@babel/preset-env"],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  },
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    ["@babel/plugin-transform-runtime", {
+      "regenerator": true
+    }],
+    ["@babel/plugin-transform-async-to-generator", {
+      "module": "bluebird",
+      "method": "coroutine"
+    }],
+    "transform-vue-jsx"
+  ]
+}

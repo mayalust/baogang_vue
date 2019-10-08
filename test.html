@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="test">
+    <test>
+      <div v-show="show">
+        <div>12312313</div>
+        <div>12312313</div>
+        <div>12312313</div>
+        <div>12312313</div>
+        <div>12312313</div>
+        <div>12312313</div>
+        <div>12312313</div>
+      </div>
+    </test>
+  </div>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    let dom = document.getElementById("test");
+    class Trans {
+      enter() {
+        console.log("enter");
+      }
+    }
+    let a = new Vue({
+      data() {
+        return {
+          show: false
+        }
+      },
+      computed: {
+
+      },
+      mounted() {
+        setTimeout(() => {
+          this.show = true;
+        }, 2000);
+      },
+      components: {
+        test: {
+          functional: true,
+          render(h, { children }) {
+            const data = {
+              on: new Trans()
+            };
+            return h('transition', data, children);
+          }
+        }
+      }
+    }).$mount(dom);
+    console.log(a);
+  </script>
+</body>
+
+</html>

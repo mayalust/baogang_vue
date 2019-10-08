@@ -1,0 +1,155 @@
+[{
+  "userName": "决策者虚拟工作台",
+  "account": "baowu_admin",
+  "password": "abc123"
+},
+{
+  "userName": "报警管理虚拟工作台  ",
+  "account": "baowu_bj",
+  "password": "abc123"
+},
+{
+  "userName": "诊断管理虚拟工作台   ",
+  "account": "baowu_fx",
+  "password": "abc123"
+},
+{
+  "userName": "协同管理虚拟工作台   ",
+  "account": "baowu_xt",
+  "password": "abc123"
+},
+{
+  "userName": "审核管理虚拟工作台   ",
+  "account": "baowu_sh",
+  "password": "abc123"
+},
+{
+  "userName": "点检管理虚拟工作台   ",
+  "account": "baowu_dj",
+  "password": "abc123"
+},
+{
+  "userName": "产线管理虚拟工作台   ",
+  "account": "baowu_cx",
+  "password": "abc123"
+},
+{
+  "userName": "检修管理虚拟工作台   ",
+  "account": "baowu_jx",
+  "password": "abc123"
+},
+{
+  "userName": "孟坤荫",
+  "account": "170628",
+  "password": "abc123"
+},
+{
+  "userName": "乐海滨",
+  "account": "041048",
+  "password": "abc123"
+},
+{
+  "userName": "沈政",
+  "account": "171211",
+  "password": "abc123"
+},
+{
+  "userName": "宋明中",
+  "account": "080231",
+  "password": "abc123"
+},
+{
+  "userName": "陈黎敏",
+  "account": "190625",
+  "password": "abc123"
+},
+{
+  "userName": "沈嘉麟",
+  "account": "170373",
+  "password": "abc123"
+},
+{
+  "userName": "廖勇",
+  "account": "190712",
+  "password": "abc123"
+},
+{
+  "userName": "陈红琳",
+  "account": "170307",
+  "password": "abc123"
+},
+{
+  "userName": "张骏骋",
+  "account": "174079",
+  "password": "abc123"
+},
+{
+  "userName": "腾威",
+  "account": "171352",
+  "password": "abc123"
+},
+{
+  "userName": "张君",
+  "account": "170381",
+  "password": "abc123"
+},
+{
+  "userName": "陈弘",
+  "account": "171163",
+  "password": "abc123"
+},
+{
+  "userName": "审核专家",
+  "account": "baowu_shzj",
+  "password": "abc123"
+},
+{
+  "userName": "宋小佩",
+  "account": "190494",
+  "password": "abc123"
+},
+{
+  "userName": "沈亮",
+  "account": "190426",
+  "password": "abc123"
+},
+{
+  "userName": "炼铁厂(产内)",
+  "account": "baowu_lt",
+  "password": "abc123"
+},
+{
+  "userName": "万欣(测试新框架)",
+  "account": "170616",
+  "password": "abc123"
+},
+{
+  "userName": "智能诊断工程师",
+  "account": "190747",
+  "password": "abc123"
+},
+{
+  "userName": "葛申剑",
+  "account": "190747",
+  "password": "abc123"
+},
+{
+  "userName": "经营服务人员",
+  "account": "baowu_jyfw",
+  "password": "abc123"
+},
+{
+  "userName": "工艺工程师",
+  "account": "baowu_gygc",
+  "password": "abc123"
+},
+{
+  "userName": "作业实施人员",
+  "account": "baowu_zyss",
+  "password": "abc123"
+},
+{
+  "userName": "质量工程师",
+  "account": "baowu_zlgc",
+  "password": "abc123"
+}]

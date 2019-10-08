@@ -1,0 +1,576 @@
+<config injector="$scope,$timeout,ajax,$state,$registerService,commonMethodService2,growl,commonMethodService"
+        deps="dialogBuildProjectList,dialogTempProjectList"
+></config>
+<template>
+    <div class="wrap">
+        <!--定子半成品试验-->
+        <div class="row">
+            <div class="margin-bottom-5">
+                <div class="col-md-12 margin-bottom-5 margin-top-15">
+                    <div class="table-title pull-left">定子半成品试验</div>
+                    <div class="pull-right">
+                        <span class="glyphicon glyphicon-chevron-down" style="font-size: 26px" data-toggle="collapse"  data-target="#stator_check" aria-haspopup="false" aria-expanded="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 margin-bottom-10">
+                    <div style=" height:2px;border:none;border-top:2px solid cornflowerblue;"></div>
+                </div>
+                <div class="" id="stator_check" class="collapse in">
+                    <div class="row margin-bottom-5">
+                        <!--第一个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            绝缘电阻（单位：MΩ）
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">对地</th>
+                                        <th colspan="3" style="text-align:center;">相间</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center;">U--V</th>
+                                        <th style="text-align:center;">V--W</th>
+                                        <th style="text-align:center;">W--U</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈1</td>
+                                        <td><input type="text" ng-model="insulationCoilOnePairToGround" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" class="form-control" ng-model="insulationCoilOneUV" style="width:100%"></td>
+                                        <td><input type="text" class="form-control" ng-model="insulationCoilOneVW" style="width:100%"></td>
+                                        <td><input type="text" class="form-control" ng-model="insulationCoilOneWU" style="width:100%"></td>
+                                        <td rowspan="2"><textarea type="text" class="form-control" ng-model="statorInsulationGaugeNumber" style="width:100%"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈2</td>
+                                        <td><input type="text" ng-model="insulationCoilTwoToGround" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="insulationCoilTwoUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="insulationCoilTwoVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="insulationCoilTwoWU" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <!--第二个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            直流电阻（单位：Ω）
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">U--V</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">V--W</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">W--U</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈1</td>
+                                        <td><input type="text" ng-model="dcResistanceCoilOneUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="dcResistanceCoilOneVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="dcResistanceCoilOneWU" class="form-control" style="width:100%"></td>
+                                        <td rowspan="2"><textarea type="text" ng-model="statorDCResistanceMeasuringInstrumentNumber" class="form-control" style="width:100%"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈2</td>
+                                        <td><input type="text" ng-model="dcResistanceCoilTwoUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="dcResistanceCoilTwoVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="dcResistanceCoilTwoWU" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <!--第三个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            极性试验
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            电压（单位：V）
+                                        </th>
+                                        <th colspan="3" style="text-align:center;">电流（单位：A）</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center;">lu</th>
+                                        <th style="text-align:center;">lv</th>
+                                        <th style="text-align:center;">lw</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈1</td>
+                                        <td><input type="text" ng-model="polarityTestCoilVoltageOne" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="polarityTestCoilOneLU" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="polarityTestCoilOneLV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="polarityTestCoilOneLW" class="form-control" style="width:100%"></td>
+                                        <td rowspan="2"><textarea type="text" ng-model="polarityTestGaugeNumber" class="form-control" style="width:100%"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈2</td>
+                                        <td><input type="text" ng-model="polarityTestCoilTwoVoltage" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="polarityTestCoilTwoLU" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="polarityTestCoilTwoLV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="polarityTestCoilTwoLW" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <!--第四个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            交流电压（V/分钟）
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">对地</th>
+                                        <th colspan="3" style="text-align:center;">相间</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center;">U--V</th>
+                                        <th style="text-align:center;">V--W</th>
+                                        <th style="text-align:center;">W--U</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈1</td>
+                                        <td><input type="text" ng-model="acVoltageCoilOneToGround" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="acVoltageCoilOneUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="acVoltageCoilOneVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="acVoltageCoilOneWU" class="form-control" style="width:100%"></td>
+                                        <td rowspan="2"><textarea type="text" ng-model="acVoltageMeterNumber" class="form-control" style="width:100%"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈2</td>
+                                        <td><input type="text" ng-model="acVoltageCoilTwoToGround" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="acVoltageCoilTwoUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="acVoltageCoilTwoVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="acVoltageCoilTwoWU" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--转子半成品试验-->
+        <div class="row">
+            <div class="margin-bottom-5">
+                <div class="col-md-12 margin-bottom-5 margin-top-15">
+                    <div class="table-title pull-left">转子半成品试验</div>
+                    <div class="pull-right">
+                        <span class="glyphicon glyphicon-chevron-down" style="font-size: 26px" data-toggle="collapse"  data-target="#rotor_check" aria-haspopup="false" aria-expanded="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 margin-bottom-10">
+                    <div style=" height:2px;border:none;border-top:2px solid cornflowerblue;"></div>
+                </div>
+                <div class="" id="rotor_check" class="collapse in">
+                    <div class="row margin-bottom-5">
+                        <!--第一个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            绝缘电阻（单位：MΩ）
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">对地</th>
+                                        <th colspan="3" style="text-align:center;">相间</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center;">U--V</th>
+                                        <th style="text-align:center;">V--W</th>
+                                        <th style="text-align:center;">W--U</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈1</td>
+                                        <td><input type="text" ng-model="groundToGroundInsulationCoil" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="insulationCoilUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="insulationCoilVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="insulationCoilWU" class="form-control" style="width:100%"></td>
+                                        <td rowspan="2"><input type="text" ng-model="rotorInsulationGaugeNumber" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <!--第二个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            直流电阻（单位：Ω）
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">U--V</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">V--W</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">W--U</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈1</td>
+                                        <td><input type="text" ng-model="dcResistanceCoilUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="dcResistanceCoilVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="dcResistanceCoilWU" class="form-control" style="width:100%"></td>
+                                        <td rowspan="2"><input type="text" ng-model="rotorDCResistanceMeasuringInstrumentNumber" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <!--第三个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            滑环耐压（v/1min）
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">对地</th>
+                                        <th colspan="3" style="text-align:center;">相间</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center;">U--V</th>
+                                        <th style="text-align:center;">V--W</th>
+                                        <th style="text-align:center;">W--U</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈</td>
+                                        <td><input type="text" ng-model="slidingRingVoltageCoilGroundToGround" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="slidingRingVoltageCoilUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="slidingRingVoltageCoilVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="slidingRingVoltageCoilWU" class="form-control" style="width:100%"></td>
+                                        <td rowspan="2"><input type="text" ng-model="slidingRingpressureGaugeNumber" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <!--第四个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            滑环与转子绕组连接后
+                                            耐压（v/1min）
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">对地</th>
+                                        <th colspan="3" style="text-align:center;">相间</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center;">U--V</th>
+                                        <th style="text-align:center;">V--W</th>
+                                        <th style="text-align:center;">W--U</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">线圈</td>
+                                        <td><input type="text" ng-model="groundToGroundWithConnectedVoltageCoil" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="connectedVoltageCoilUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="connectedVoltageCoilVW" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="connectedVoltageCoilWU" class="form-control" style="width:100%"></td>
+                                        <td rowspan="2"><input type="text" ng-model="numberOfPressureGaugeAfterConnection" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <!--第五个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            电压比试验
+                                        </th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">
+                                            电压（单位：V）
+                                        </th>
+                                        <th colspan="3" style="text-align:center;">电流（单位：A）</th>
+                                        <th rowspan="2" style="text-align:center;line-height:600%">量具编号</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center;">lu</th>
+                                        <th style="text-align:center;">lv</th>
+                                        <th style="text-align:center;">lw</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">定子</td>
+                                        <td><input type="text" ng-model="voltageRatioStatorVoltage" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="voltageRatioStatorLU" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="voltageRatioStatorLV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="voltageRatioStatorLW" class="form-control" style="width:100%"></td>
+                                        <td rowspan="4"><textarea type="text" ng-model="voltageRatioNumber" class="form-control" style="width:100%"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%"></td>
+                                        <td colspan="4" style="text-align:center;line-height:200%">电压（单位：V）</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%"></td>
+                                        <td style="text-align:center;line-height:200%">U--V</td>
+                                        <td style="text-align:center;line-height:200%">V--W</td>
+                                        <td colspan="2" style="text-align:center;line-height:200%">W--U</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">转子</td>
+                                        <td><input type="text" ng-model="voltageRatioRotorUV" class="form-control" style="width:100%"></td>
+                                        <td><input type="text" ng-model="voltageRatioRotorVW" class="form-control" style="width:100%"></td>
+                                        <td colspan="2"><input type="text" ng-model="voltageRatioRotorWU" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--结论-->
+        <div class="row">
+            <div class="margin-bottom-5">
+                <div class="col-md-12 margin-bottom-5 margin-top-15">
+                    <div class="table-title pull-left">结论</div>
+                </div>
+                <div class="col-md-12 margin-bottom-10">
+                    <div style=" height:2px;border:none;border-top:2px solid cornflowerblue;"></div>
+                </div>
+                <div class="" id="disassembly_check" class="collapse in">
+                    <div class="row margin-bottom-5">
+                        <!--第一个-->
+                        <div class="col-md-12">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <table class="table table-bordered2" id="mytable">
+                                    <tbody id="listTable">
+                                    <tr>
+                                        <td style="text-align:center;line-height:200%">试验人</td>
+                                        <td><input type="text" ng-model="testPerson" class="form-control" style="width:100%"></td>
+                                        <td style="text-align:center;line-height:200%">试验日期</td>
+                                        <!--<td><input type="text" ng-model="testDate" class="form-control" style="width:100%"></td>-->
+                                        <td><ps-date2 ng-model="testDate" style="width:100%"></ps-date2></td>
+
+                                        <td style="text-align:center;line-height:200%">审核员</td>
+                                        <td><input type="text" ng-model="auditorPersion" class="form-control" style="width:100%"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--提交 取消-->
+        <div class="row margin-top-10">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-7">
+                <button class="btn btn-primary btn-100" ng-click="submitFn()">提交</button>
+                <button class="btn btn-default btn-100" ng-click="close()">取消</button>
+            </div>
+        </div>
+
+    </div>
+</template>
+<script>
+    import { dateparser } from "ps-ultility";
+    export default function( scope,timeout,ajax,$state,registerService,cms2,growl,commonMethodService){
+        let saveSemiFinishProductTestAC = "motorRepairUIService.saveSemiFinishProductTestAC",
+                findOneSemiFinishProductTestAC = "motorRepairUIService.findOneSemiFinishProductTestAC";
+
+        var target = commonMethodService();
+        var params88 = target.getValue("maintainObj");
+        var params89 = params88.implementOrderNo;
+        var param99 = [];
+        param99.push(params89);
+         
+
+
+        class tableCell{
+            constructor(data){
+                for(var i in data){
+                    this[i] = data[i];
+                }
+            }
+            getModifyTime(){
+                return this.modifyTime
+                        ? dateparser(this.modifyTime).getDateString("yyyy-MM-dd,hh:mm:ss")
+                        : "-";
+            }
+        }
+
+        scope.submitFn = function(){
+            var params ={};
+            params.implementOrderNo = params89;
+            if(scope.id){
+                params.id = scope.id;
+            }
+
+//            特殊处理
+            if(scope.testDate){
+                params.testDate = scope.testDate;
+            }
+            for(var key in scope){
+                if(scope.hasOwnProperty(key) === true){
+                    if(typeof(scope[key]) == "string"){
+                        params[key] = scope[key];
+                    }
+                }
+            }
+
+            ajax.post(saveSemiFinishProductTestAC,params).then(() => {
+                growl.info("添加半成品实验成功");
+            })
+        };
+
+        scope.close = function(){
+            //特殊处理
+            if(scope.testDate){
+                delete  scope.testDate;
+            }
+            for(var key in scope){
+                if(scope.hasOwnProperty(key) === true){
+                    if(typeof(scope[key]) == "string"){
+                        scope[key] = "";
+                    }
+                }
+            }
+        }
+
+//        展示数据
+        ajax.post(findOneSemiFinishProductTestAC, param99).then( SemiFinish => {
+            for(var key in SemiFinish){
+                if(SemiFinish.hasOwnProperty(key) === true){
+                    scope[key] = SemiFinish[key];
+                }
+            }
+        })
+
+    }
+</script>
+<style lang="less" scoped>
+    .wrap {
+        padding : 5px 10px !important;
+        .title{
+            line-height : 26px;
+            padding-right : 20px;
+        }
+        .value {
+            line-height : 26px;
+        }
+        .option{
+            width : 160px;
+        }
+        .arrow {
+            font-size: 18px;
+        }
+        .tbl {
+            width: 100%;
+            display: table;
+        }
+        .tbl-cell {
+            display: table-cell;
+        }
+        .radio-lbl {
+            display: table-cell;
+            width: 150px;
+            text-align:right;
+            padding-right: 5px;
+        }
+        .radio-inp {
+            vertical-align:-2px;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+        }
+        .radio-spa {
+            padding: 0 15px 0 2px;
+        }
+        .radio-unit {
+            display: table-cell;
+            padding-left: 2px;
+            width: 40px;
+        }
+        .chx {
+            vertical-align: -2px;
+            margin-left: 40px;
+        }
+        .col-md-n {
+            width: 12.5% !important;
+        }
+        .table-bordered2 {
+            tr,td,th {
+                border: 1px solid #bdbdbd !important;/* 整体表格边框 */
+            }
+        }
+    }
+</style>

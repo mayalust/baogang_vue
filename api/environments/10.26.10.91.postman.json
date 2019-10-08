@@ -1,0 +1,437 @@
+{
+  "name": "10.26.10.91",
+  "values": [
+    {
+      "enabled": true,
+      "key": "actionService",
+      "value": "http://10.26.10.91/api/rest/post/actionService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "alertManageFlexService",
+      "value": "http://10.26.10.91/api/rest/post/alertManageFlexService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "alertQueryService",
+      "value": "http://10.26.10.91/api/rest/post/alertQueryService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "chargeUIService",
+      "value": "http://10.26.10.91/api/rest/post/chargeUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "chartOptionService",
+      "value": "http://10.26.10.91/api/rest/post/chartOptionService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "commonMethodService",
+      "value": "http://10.26.10.91/api/rest/post/commonMethodService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "configUIService",
+      "value": "http://10.26.10.91/api/rest/post/configUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "customMethodService",
+      "value": "http://10.26.10.91/api/rest/post/customMethodService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "customerProjectUIService",
+      "value": "http://10.26.10.91/api/rest/post/customerProjectUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "customerService",
+      "value": "http://10.26.10.91/api/rest/post/customerService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "dashboardService",
+      "value": "http://10.26.10.91/api/rest/post/dashboardService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "dataMiningService",
+      "value": "http://10.26.10.91/api/rest/post/dataMiningService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "deviceAccessUIService",
+      "value": "http://10.26.10.91/api/rest/post/deviceAccessUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "deviceResumeUIService",
+      "value": "http://10.26.10.91/api/rest/post/deviceResumeUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "dictionaryService",
+      "value": "http://10.26.10.91/api/rest/post/dictionaryService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "directiveStrategyUIService",
+      "value": "http://10.26.10.91/api/rest/post/directiveStrategyUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "distributorService",
+      "value": "http://10.26.10.91/api/rest/post/distributorService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "energyConsumeUIService",
+      "value": "http://10.26.10.91/api/rest/post/energyConsumeUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "faultKnowledgeUIService",
+      "value": "http://10.26.10.91/api/rest/post/faultKnowledgeUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "freeBoardBaseService",
+      "value": "http://10.26.10.91/api/rest/post/freeBoardBaseService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "freeBoardService",
+      "value": "http://10.26.10.91/api/rest/post/freeBoardService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "jacquardMachineStateUIService",
+      "value": "http://10.26.10.91/api/rest/post/jacquardMachineStateUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "keySetService",
+      "value": "http://10.26.10.91/api/rest/post/keySetService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "kpiDataFlexService",
+      "value": "http://10.26.10.91/api/rest/post/kpiDataFlexService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "kqiManagerUIService",
+      "value": "http://10.26.10.91/api/rest/post/kqiManagerUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "localdbService",
+      "value": "http://10.26.10.91/api/rest/post/localdbService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "maintenanceTaskUIService",
+      "value": "http://10.26.10.91/api/rest/post/maintenanceTaskUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "marketplaceUIService",
+      "value": "http://10.26.10.91/api/rest/post/marketplaceUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "modelDefinitionService",
+      "value": "http://10.26.10.91/api/rest/post/modelDefinitionService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "nodeService",
+      "value": "http://10.26.10.91/api/rest/post/nodeService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "processDefinitionService",
+      "value": "http://10.26.10.91/api/rest/post/processDefinitionService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "productUIService",
+      "value": "http://10.26.10.91/api/rest/post/productUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "projectService",
+      "value": "http://10.26.10.91/api/rest/post/projectService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "psMessageService",
+      "value": "http://10.26.10.91/api/rest/post/psMessageService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "reportFlexService",
+      "value": "http://10.26.10.91/api/rest/post/reportFlexService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "reportUIService",
+      "value": "http://10.26.10.91/api/rest/post/reportUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "resourceFileService",
+      "value": "http://10.26.10.91/api/rest/post/resourceFileService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "resourceFileUIService",
+      "value": "http://10.26.10.91/api/rest/post/resourceFileUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "resourceUIService",
+      "value": "http://10.26.10.91/api/rest/post/resourceUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "roleViewService",
+      "value": "http://10.26.10.91/api/rest/post/roleViewService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "rollerPartUIService",
+      "value": "http://10.26.10.91/api/rest/post/rollerPartUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "serviceCenterService",
+      "value": "http://10.26.10.91/api/rest/post/serviceCenterService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "service_factory",
+      "value": "http://10.26.10.91/api/rest/post/service_factory",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "services",
+      "value": "http://10.26.10.91/api/rest/post/services",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "solutionUIService",
+      "value": "http://10.26.10.91/api/rest/post/solutionUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "sparepartUIService",
+      "value": "http://10.26.10.91/api/rest/post/sparepartUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "specialListService",
+      "value": "http://10.26.10.91/api/rest/post/specialListService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "teamGroupService",
+      "value": "http://10.26.10.91/api/rest/post/teamGroupService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "tglibraryService",
+      "value": "http://10.26.10.91/api/rest/post/tglibraryService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "thridpartyApiService",
+      "value": "http://10.26.10.91/api/rest/post/thridpartyApiService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "ticketCategoryService",
+      "value": "http://10.26.10.91/api/rest/post/ticketCategoryService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "ticketLogService",
+      "value": "http://10.26.10.91/api/rest/post/ticketLogService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "ticketService",
+      "value": "http://10.26.10.91/api/rest/post/ticketService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "ticketTaskService",
+      "value": "http://10.26.10.91/api/rest/post/ticketTaskService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "toolbarListService",
+      "value": "http://10.26.10.91/api/rest/post/toolbarListService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "unitService",
+      "value": "http://10.26.10.91/api/rest/post/unitService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uploaderService",
+      "value": "http://10.26.10.91/api/rest/post/uploaderService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userDomainService",
+      "value": "http://10.26.10.91/api/rest/post/userDomainService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userEnterpriseService",
+      "value": "http://10.26.10.91/api/rest/post/userEnterpriseService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userFunctionService",
+      "value": "http://10.26.10.91/api/rest/post/userFunctionService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userIdentifyService",
+      "value": "http://10.26.10.91/api/rest/post/userIdentifyService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userInitService",
+      "value": "http://10.26.10.91/api/rest/post/userInitService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userLoginUIService",
+      "value": "http://10.26.10.91/api/rest/post/userLoginUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userRoleUIService",
+      "value": "http://10.26.10.91/api/rest/post/userRoleUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "userUIService",
+      "value": "http://10.26.10.91/api/rest/post/userUIService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "viewFlexService",
+      "value": "http://10.26.10.91/api/rest/post/viewFlexService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "weatherService",
+      "value": "http://10.26.10.91/api/rest/post/weatherService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "websocketServiceBaogang",
+      "value": "http://10.26.10.91/api/rest/post/websocketServiceBaogang",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "websocketService",
+      "value": "http://10.26.10.91/api/rest/post/websocketService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "workFlowDefinitionService",
+      "value": "http://10.26.10.91/api/rest/post/workFlowDefinitionService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "workFlowService",
+      "value": "http://10.26.10.91/api/rest/post/workFlowService",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "localdb",
+      "value": "http://10.26.10.91/localdb",
+      "type": "text"
+    }
+  ]
+}

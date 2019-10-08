@@ -1,0 +1,1000 @@
+<config injector="$scope,$timeout,ajax,$state,$registerService,commonMethodService2,growl,commonMethodService"
+        deps="dialogBuildProjectList,dialogTempProjectList"
+></config>
+<template>
+    <div class="wrap">
+        <!--机械部分记录-->
+        <div class="row">
+            <div class="margin-bottom-5">
+                <div class="col-md-12 margin-bottom-5 margin-top-15">
+                    <div class="table-title pull-left">机械部分记录</div>
+                    <div class="pull-right">
+                        <span class="glyphicon glyphicon-chevron-down" style="font-size: 26px" data-toggle="collapse"  data-target="#down_lead1" aria-haspopup="false" aria-expanded="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 margin-bottom-10">
+                    <div style=" height:2px;border:none;border-top:2px solid cornflowerblue;"></div>
+                </div>
+                <div class="" id="down_lead1" class="collapse in">
+                    <div class="row margin-bottom-5">
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        定子铁芯外径:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="outerDiameterOfStatorCore" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        定子铁芯内径:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="internalDiameterOfStatorCore" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        转子铁芯外径:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="outerDiameterOfRotorCore" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        转子铁芯内径:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="innerDiameterOfRotorCore" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        定子铁芯总长:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="totalLengthOfStatorCore" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        定子通风沟数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfStatorVentilationDitche" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        转子铁芯总长:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="totalLengthOfRotorCore" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        转子通风沟数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfRotorVentilationChannel" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="tbl">
+                                <div class="radio-lbl">
+                                    备注:
+                                </div>
+                                <div class="tbl-cell">
+                                    <input type="text" ng-model="remarkMechanicalPart" class="form-control"/>
+                                </div>
+                                <div class="radio-unit">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="tbl">
+                                <div class="radio-lbl">
+                                    附件:
+                                </div>
+                                <div class="tbl-cell">
+                                    <ps-file2  ng-model="accessoriesMechanicalPart"></ps-file2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--定子部分-->
+        <div class="row">
+            <div class="margin-bottom-5">
+                <div class="col-md-12 margin-bottom-5 margin-top-15">
+                    <div class="table-title pull-left">定子部分</div>
+                    <div class="pull-right">
+                        <span class="glyphicon glyphicon-chevron-down" style="font-size: 26px" data-toggle="collapse"  data-target="#down_lead2" aria-haspopup="false" aria-expanded="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 margin-bottom-10">
+                    <div style=" height:2px;border:none;border-top:2px solid cornflowerblue;"></div>
+                </div>
+                <div class="" id="down_lead2" class="collapse in">
+                    <div class="row margin-bottom-5">
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        引出线长度:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="lengthOfLeadOutLineStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        引出线截面:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="sectionOfLeadOutLineStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        绕组端部长度:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="endLengthOfWindingStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        绕组型式:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="windingTypeStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        实际接法:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="actualConnectionStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        极数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="poleNumberStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        槽数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="slotNumberStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线圈匝数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="coilTurnsStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        节距:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="pitchStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        并联支路数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfParallelBrancheStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线规（ф）:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="wireGauge1StatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线规（ф）:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="wireGauge2StatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线规（ф）:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="wireGauge3StatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        极相组数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="polarPhaseGroupNumberStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        铜线型号:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="copperWireModelStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        引出线数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfLeadOutLinesStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        并绕根数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfParallelRadicalStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>根</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        通风沟宽:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="ventilationTrenchWidthStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        出现位置:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="locationOfOccurrenceStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>路</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        槽衬绝缘:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="slotLiningInsulationStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        每极相组线圈数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfCoilPerPolarPhaseGroupStatorOne" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>组</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="tbl">
+                                <div class="radio-lbl">
+                                    备注:
+                                </div>
+                                <div class="tbl-cell">
+                                    <input type="text" ng-model="remarksStatorOne" class="form-control"/>
+                                </div>
+                                <div class="radio-unit">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="tbl">
+                                <div class="radio-lbl">
+                                    附件:
+                                </div>
+                                <div class="tbl-cell">
+                                    <ps-file2  ng-model="accessoriesStatorOne"></ps-file2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--定子部分2-->
+        <div class="row">
+            <div class="margin-bottom-5">
+                <div class="col-md-12 margin-bottom-5 margin-top-15">
+                    <div class="table-title pull-left">定子部分</div>
+                    <div class="pull-right">
+                        <span class="glyphicon glyphicon-chevron-down" style="font-size: 26px" data-toggle="collapse"  data-target="#down_lead3" aria-haspopup="false" aria-expanded="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 margin-bottom-10">
+                    <div style=" height:2px;border:none;border-top:2px solid cornflowerblue;"></div>
+                </div>
+                <div class="" id="down_lead3" class="collapse in">
+                    <div class="row margin-bottom-5">
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        引出线长度:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="lengthOfLeadOutLineStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        引出线截面:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="sectionOfLeadOutLineStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        绕组端部长度:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="endLengthOfWindingStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        绕组型式:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="windingTypeStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        实际接法:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="actualConnectionStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        极数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="poleNumberStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        槽数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="slotNumberStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线圈匝数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="coilTurnsStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        节距:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="pitchStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        并联支路数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfParallelBrancheStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线规（ф）:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="wireGauge1StatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线规（ф）:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="wireGauge2StatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        线规（ф）:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="wireGauge3StatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        极相组数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="polarPhaseGroupNumberStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        铜线型号:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="copperWireModelStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        引出线数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfLeadOutLinesStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        并绕根数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfParallelRadicalStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>根</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        通风沟宽:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="ventilationTrenchWidthStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        出现位置:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="locationOfOccurrenceStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>路</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        槽衬绝缘:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="slotLiningInsulationStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tbl">
+                                    <div class="radio-lbl">
+                                        每极相组线圈数:
+                                    </div>
+                                    <div class="tbl-cell">
+                                        <input type="text" ng-model="numberOfCoilPerPolarPhaseGroupStatorTwo" class="form-control"/>
+                                    </div>
+                                    <div class="radio-unit">
+                                        <span>组</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="tbl">
+                                <div class="radio-lbl">
+                                    备注:
+                                </div>
+                                <div class="tbl-cell">
+                                    <input type="text" ng-model="remarksStatorTwo" class="form-control"/>
+                                </div>
+                                <div class="radio-unit">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="tbl">
+                                <div class="radio-lbl">
+                                    附件:
+                                </div>
+                                <div class="tbl-cell">
+                                    <ps-file2  ng-model="accessoriesStatorTwo"></ps-file2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--转子部分-->
+        <div class="row">
+            <div class="margin-bottom-5">
+                <div class="col-md-12 margin-bottom-5 margin-top-15">
+                    <div class="table-title pull-left">转子部分</div>
+                    <div class="pull-right">
+                        <span class="glyphicon glyphicon-chevron-down" style="font-size: 26px" data-toggle="collapse"  data-target="#down_lead4" aria-haspopup="false" aria-expanded="true"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 margin-bottom-10">
+                    <div style=" height:2px;border:none;border-top:2px solid cornflowerblue;"></div>
+                </div>
+                <div class="" id="down_lead4" class="collapse in">
+                    <div class="row margin-bottom-5">
+                        <div class="col-md-12 margin-bottom-5">
+                            <div class="tbl">
+                                <div class="radio-lbl">
+                                    笼条处理:
+                                </div>
+                                <div class="tbl-cell">
+                                    <input type="text" ng-model="cageBarTreatment" class="form-control"/>
+                                </div>
+                                <div class="radio-unit">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--提交 取消-->
+        <div class="row margin-top-10">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-7">
+                <button class="btn btn-primary btn-100" ng-click="submitFn()">提交</button>
+                <button class="btn btn-default btn-100" ng-click="close()">取消</button>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    import { dateparser } from "ps-ultility";
+    export default function( scope,timeout,ajax,$state,registerService,cms2,growl,commonMethodService){
+        let saveWindingOverhaulAC = "motorRepairUIService.saveWindingOverhaulAC",
+                findOneWindingOverhaulAC = "motorRepairUIService.findOneWindingOverhaulAC";
+
+        var target = commonMethodService();
+        var params88 = target.getValue("maintainObj");
+        var params89 = params88.implementOrderNo;
+        var param99 = [];
+        param99.push(params89);
+         
+
+        class tableCell{
+            constructor(data){
+                for(var i in data){
+                    this[i] = data[i];
+                }
+            }
+            getModifyTime(){
+                return this.modifyTime
+                        ? dateparser(this.modifyTime).getDateString("yyyy-MM-dd,hh:mm:ss")
+                        : "-";
+            }
+        }
+        scope.submitFn = function(){
+            var params ={};
+            params.implementOrderNo = params89;
+            if(scope.id){
+                params.id = scope.id;
+            }
+//            特殊处理1
+            if(scope.accessoriesMechanicalPart){
+                params.accessoriesMechanicalPart = scope.accessoriesMechanicalPart;
+            }
+            //            特殊处理2
+            if(scope.accessoriesStatorOne){
+                params.accessoriesStatorOne = scope.accessoriesStatorOne;
+            }
+            //            特殊处理3
+            if(scope.accessoriesStatorTwo){
+                params.accessoriesStatorTwo = scope.accessoriesStatorTwo;
+            }
+            for(var key in scope){
+                if(scope.hasOwnProperty(key) === true){
+                    if(typeof(scope[key]) == "string"){
+                        params[key] = scope[key];
+                    }
+                }
+            }
+
+            ajax.post(saveWindingOverhaulAC,params).then(() => {
+                growl.info("添加绕组大修成功");
+            })
+        }
+        scope.close = function(){
+            //            特殊处理1
+            if(scope.accessoriesMechanicalPart){
+                scope.accessoriesMechanicalPart = [];
+            }
+            //特殊处理2
+            if(scope.accessoriesStatorOne){
+                scope.accessoriesStatorOne = [];
+            }
+            //特殊处理3
+            if(scope.accessoriesStatorTwo){
+                delete scope.accessoriesStatorTwo;
+            }
+            for(var key in scope){
+                if(scope.hasOwnProperty(key) === true){
+                    if(typeof(scope[key]) == "string"){
+                        scope[key] = "";
+                    }
+                }
+            }
+        }
+
+//        展示数据
+        ajax.post(findOneWindingOverhaulAC, param99).then( overhaul => {
+            for(var key in overhaul){
+                if(overhaul.hasOwnProperty(key) === true){
+                    scope[key] = overhaul[key];
+                }
+            }
+        })
+
+    }
+</script>
+<style lang="less" scoped>
+    .wrap {
+        padding : 5px 10px !important;
+    .title{
+        line-height : 26px;
+        padding-right : 20px;
+    }
+    .value {
+        line-height : 26px;
+    }
+    .option{
+        width : 160px;
+    }
+    .arrow {
+        font-size: 18px;
+    }
+    .tbl {
+        width: 100%;
+        display: table;
+    }
+    .tbl-cell {
+        display: table-cell;
+    }
+    .radio-lbl {
+        display: table-cell;
+        width: 150px;
+        text-align:right;
+        padding-right: 5px;
+    }
+    .radio-inp {
+        vertical-align:-2px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+    .radio-spa {
+        padding: 0 15px 0 2px;
+    }
+    .radio-unit {
+        display: table-cell;
+        padding-left: 2px;
+        width: 40px;
+    }
+    .chx {
+        vertical-align: -2px;
+        margin-left: 40px;
+    }
+    }
+</style>
