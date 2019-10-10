@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+
+  .circle {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: aqua;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .popper-dropmenu {
+    margin-top: -50px;
+    padding-top: 60px;
+    margin-left: -50px;
+    z-index: 99999;
+
+    ul.popper-dropmenu-content {
+      margin: 0;
+      padding: 5px 10px;
+      list-style: none;
+      background-color: black;
+      color: white;
+      max-height: 200px;
+      overflow-y: auto;
+
+      li {
+        line-height: 30px;
+      }
+    }
+  }
+
+  .baowu-global-bg {
+    position: relative;
+    background-image: url(../../../images/baogang/map.png);
+    width: 100%;
+    padding-bottom: 65%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .el-select {
+    width: 100%;
+  }
+
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+
+  ul.table-btn-group-drop {
+    padding: 5px;
+    margin: 0;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      padding: 2px 10px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
